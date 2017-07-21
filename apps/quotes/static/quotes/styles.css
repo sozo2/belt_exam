@@ -1,0 +1,87 @@
+.register, .login{
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    width: 120px;
+}
+
+.msg {
+    text-align: center;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.footer{
+    height: 100px;
+}
+
+.left, .right {
+    display: inline-block;
+    height: 540px;
+}
+
+.left{
+    border: 1px solid black;
+}
+
+.success-msg{
+    color: green;
+}
+
+.scroll{
+    overflow: scroll;
+}
+
+.top, .bottom {
+    border: 1px solid black;
+}
+
+.top{
+    margin-bottom: 20px;
+    height: 280px;
+}
+
+.bottom{
+    height: 280;
+}
+
+.quote-button{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    width: 80px;
+}
+
+.quote-container{
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.add-btn{
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: block;
+    width: 140px;
+}
+
+.remove-quote{
+    font-size: 12px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.speaker{
+    color: red;
+}
+
+.user-count{
+    text-decoration: underline;
+}
+
+.user-quote{
+    margin: 10px 0px 0px 15px;
+}

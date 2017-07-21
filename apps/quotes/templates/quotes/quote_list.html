@@ -1,0 +1,10 @@
+{% for quote in quote_list %}
+
+<div class='col-md-11 quote-container'>
+    <p>{{quote.speaker}}: "{{quote.content}}"</p>
+    <div class='add-list'>Posted by <a href='/user/{{quote.user.id}}'>{{quote.user.username}}</a>
+    <a href="/favorite/{{quote.id}}"><button class="btn btn-primary add-btn">Add to my list</button></a>
+    </div>
+</div>
+
+{% endfor %}

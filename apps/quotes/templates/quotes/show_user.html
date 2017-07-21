@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quotable Quotes</title>
+        {% load static %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'quotes/styles.css' %}">
+    </head>
+    <body>
+        <div class='container-fluid'>
+
+            <div class='col-md-12 text-right'><a href='/quotes'>Dashboard</a> | <a href='/logout'>Logout</a></div>
+            <div class='col-md-6 col-md-offset-1'>
+                <div class='col-md-12'><h4>User: {{user.username}}</h4></div>
+                <div class='col-md-12 user-count'>Total Posts: {{count}}</div>
+                {% for post in posts %}
+                    <div class='col-md-12 user-quote'><span class='speaker'>{{post.speaker}}:</span> {{post.content}}</div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </body>
+</html>

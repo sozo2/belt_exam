@@ -1,0 +1,10 @@
+{% for favorite in favorite_list %}
+
+<div class='col-md-11 quote-container'>
+    <p>{{favorite.quote.speaker}}: "{{favorite.quote.content}}"</p>
+    <div class='add-list'>Posted by <a href='/user/{{quote.user.id}}'>{{favorite.quote.user.username}}</a>
+    <a href="/remove/{{favorite.id}}"><button class="btn btn-primary remove-quote">Remove From My List</button></a>
+    </div>
+</div>
+
+{% endfor %}

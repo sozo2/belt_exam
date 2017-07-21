@@ -1,0 +1,10 @@
+<h4>Contribute a Quote:</h4>
+<form action="/quote/new" method="post">
+{% csrf_token %}
+    <label for="speaker" class="col-1 col-form-label">Quoted By:</label>
+    <div class="col-4"><input class="form-control" type="text" name="speaker"></div>
+    <label for="content" class="col-1 col-form-label">Quote:</label>
+    <textarea class="form-control" name="content"></textarea>
+    <div class="col-4"><input class="btn btn-primary quote-button" type="submit" value="Submit"></div>
+</form>
+

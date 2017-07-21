@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quotable Quotes</title>
+        {% load static %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'quotes/styles.css' %}">
+    </head>
+    <body>
+        <div class='container-fluid'>
+
+            <div class='row'>
+                <div class='col-md-9'><h4>Welcome, {{user.first_name}}!</h4></div>
+                <div class='col-md-3 text-right'><a href='/logout'>Logout</a></div>
+            </div>
+            <div class='row'>
+                <div class='col-md-6 text-center'><h4>Quotable Quotes</h4></div>
+                <div class='col-md-6 text-center'><h4>Your Favorites</h4></div>
+            </div>
+            <div class='row'>
+                <div class='col-md-3 col-md-offset-2 scroll left'>
+                    {% include 'quotes/quote_list.html' %}
+                </div>
+                <div class='col-md-3 col-md-offset-2 right'>
+                    <div class='col-md-12 top scroll'>
+                    {% include 'quotes/favorite_list.html' %}
+                    </div>
+                    <div class='col-md-12 bottom'>
+                    {% include 'quotes/add_quote.html' %}
+                    </div>
+                </div>
+            </div>
+
+            <div class='col-md-12 footer'>
+                <div class='col-md-6 col-md-offset-6 msg'>
+                {% for message in messages %}
+                <div class='col-md-12'>{{message}}</div>
+                {% endfor %}
+                <div>
+            </div>
+        </div>
+    </body>
+</html>
